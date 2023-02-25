@@ -1,0 +1,278 @@
+body {
+  font-family: $font-family-base;
+  font-size: 0.8rem;
+  color: $primary;
+  #logo {
+    width: 8.5rem;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  p {
+    font-weight: 500;
+  }
+
+  header {
+    border-bottom: 2px solid rgb(232, 232, 232);
+    .paris-nav-inline {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .paris-nav-list {
+      padding: 0.85rem 1.5rem;
+      &:hover {
+        border-top: 5px solid $primary;
+      }
+    }
+    .nav-list-search {
+      padding: 0.45rem 1.5rem;
+      width: 11rem;
+      .paris-input-nav {
+        background-color: rgb(232, 232, 232);
+        &::before {
+          @include glyphe;
+          content: "\e801";
+        }
+      }
+    }
+    .my-paris {
+      padding: 0 1.5rem;
+      &::before {
+        @include glyphe;
+        content: "\e803";
+      }
+    }
+  }
+
+  main {
+    .paris-tabs {
+      font-size: 0.8em;
+      font-weight: 800;
+    }
+
+    .section-actus {
+      .article-primary {
+        position: relative;
+        h2 {
+          font-weight: 900;
+        }
+        .paris-tag-article-primary {
+          position: absolute;
+          top: 75%;
+          left: 5%;
+          z-index: 10;
+          padding: 6px 12px;
+          font-size: 0.7rem;
+          font-weight: 800;
+        }
+        .paris-text-article-primary {
+          position: absolute;
+          top: 80%;
+          z-index: 1;
+          padding: 20px 35px;
+          margin-right: 20px;
+        }
+      }
+
+      .article-secondary {
+        position: relative;
+        margin: 0 10px;
+        h3 {
+          font-size: 1rem;
+          font-weight: 800;
+        }
+        .paris-tag-article-secondary {
+          position: absolute;
+          top: 62%;
+          left: 5%;
+          z-index: 1;
+          font-size: 0.7rem;
+          font-weight: 800;
+        }
+      }
+    }
+
+    .paris-access {
+      font-weight: 700;
+      h2 {
+        font-size: 1.1rem;
+        font-weight: 700;
+      }
+      .paris-access-nav {
+        font-size: 0.6rem;
+        .paris-li-access {
+          background-color: rgb(231, 231, 231);
+          padding: 2px;
+          margin: 10px 0;
+          &:hover {
+            background-color: lighten(rgb(231, 231, 231), 10%);
+          }
+          &::before {
+            @include glyphe;
+            content: "\e804";
+            color: $info;
+            font-size: 1rem;
+          }
+        }
+        button {
+          @include buttonSlide;
+        }
+      }
+      .services {
+        padding: 0 60px;
+        .service-list {
+          padding: 20px 0;
+          font-weight: normal;
+          &:hover {
+            border-top: 2px solid $primary;
+          }
+        }
+      }
+    }
+
+    .zoom-img {
+      overflow: hidden;
+      max-width: 100%;
+
+      img {
+        max-width: 100%;
+
+        &:hover {
+          transform: scale(1.2);
+          transition: transform 0.2s ease;
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  footer {
+    .footer-logo {
+      max-width: 150px;
+    }
+
+    .footer-extra-item {
+      border-right: 1px solid rgb(221, 221, 221);
+      padding: 0px 25px;
+      p {
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin: 0
+      }
+      button {
+        @include buttonSlide;
+      }
+    }
+
+    .footer-newsletter {
+      background-color: $primary;
+      padding: 20px 40px;
+      form {
+        .footer-form-label {
+          @include hideSR;
+        }
+        button {
+          @include buttonSlide(
+            $bgColor: $danger,
+            $color: $light,
+            $colorHover: $danger,
+            $padding : 15px 18px
+          );
+        }
+      }
+      a {
+        color: $light;
+        font-size: 1rem;
+        margin: 0 15px;
+        &:hover {
+          color: $danger;
+        }
+      }
+      .facebook::before {
+        @include glyphe;
+        content: "\e805";
+      }
+      .twitter::before {
+        @include glyphe;
+        content: "\f303";
+      }
+      .instagram::before {
+        @include glyphe;
+        content: "\f16d";
+      }
+      .linkedin::before {
+        @include glyphe;
+        content: "\f318";
+      }
+      .youtube::before {
+        @include glyphe;
+        content: "\f16a";
+      }
+      .footer-contact {
+        button {
+          @include buttonSlide($fontSize: 0.8rem);
+        }
+      }
+    }
+    .footer-contact{
+      margin-top: 15px;
+      a {
+        padding: 10px;
+        font-weight: 700;
+        font-size: 0.6rem;
+        &:hover{
+          color: $danger;
+        }
+      }
+    }
+
+    
+  }
+
+  .paris-telex-article {
+    border-bottom: 1px solid rgb(231, 231, 231);
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+  }
+}
+
+@media (max-width: 799px) {
+  .paris-nav-inline,
+  .paris-access,
+  .paris-telex {
+    @include hideSR;
+  }
+}
+
+@media (min-width: 800px) {
+  /* a partir de 800px */
+
+  .header-button-menu,
+  .paris-tabs {
+    @include hideSR;
+  }
+
+  .section-actus {
+    width: 40rem;
+    
+    .article-primary {
+      .paris-text-article-primary{
+        margin-left: 60px;
+      }
+      .paris-tag-article-primary{
+        margin-left: 50px;
+      }
+    }
+
+    .article-secondary {
+      .paris-tag-article-secondary {
+        top: 55% !important;
+        left: 10% !important;
+        ;
+      }
+    }
+  }
+}
