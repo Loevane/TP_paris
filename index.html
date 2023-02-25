@@ -10,83 +10,74 @@
   </head>
   <body>
     <header class="d-flex justify-content-between">
-        <div class="d-flex align-items-center">
-          <h1 class="px-3">
-            <a href="">
-              <img
-                src="./images/logo-ville-paris.png"
-                alt="logo ville de Paris"
-                id="logo"
-              />
-            </a>
-          </h1> 
+      <div class="d-flex align-items-center">
+        <h1 class="px-3">
+          <a href="">
+            <img
+              src="./images/logo-ville-paris.png"
+              alt="logo ville de Paris"
+              id="logo"
+            />
+          </a>
+        </h1> 
+      
+        <nav class="paris-nav-inline">
+          <ul class="list-unstyled d-flex align-items-center m-0">
+            <li class="paris-nav-list">
+              <a href="">Services</a>
+            </li>
+            <li class="paris-nav-list">
+              <a href="">Municipalité</a>
+            </li>
+            <li class="paris-nav-list">
+              <a href="">Participez !</a>
+            </li>
+            <li class="paris-nav-list">
+              <a href="">Que faire à Paris ?</a>
+            </li>
+            <li class="paris-nav-list">
+              <a href="">Jeux 2024</a>
+            </li>
+            <li class="nav-list-search">
+              <a href="">
+                <button>Recherche</button>
+              </a>
         
-          <div class="paris-nav-inline">
-           <ul class="list-unstyled d-flex align-items-center m-0">
-             <li class="paris-nav-list">
-               <a href="">Services</a>
-             </li>
-             <li class="paris-nav-list">
-               <a href="">Municipalité</a>
-             </li>
-             <li class="paris-nav-list">
-               <a href="">Participez !</a>
-             </li>
-             <li class="paris-nav-list">
-               <a href="">Que faire à Paris ?</a>
-             </li>
-             <li class="paris-nav-list">
-               <a href="">Jeux 2024</a>
-             </li>
-             <li class="paris-nav-list nav-list-search">
-              <form class="d-flex " role="search">
-                <input class="form-control rounded-0 paris-input-nav" type="search" placeholder="Recherche" aria-label="Search">
-              </form>
-          
-             </li>
-             <li class="my-paris text-info">
-               <a href="" class="text-info">Mon paris</a>
-             </li>
-            </ul>
+            </li>
+            <li class="my-paris text-info">
+              <a href="" class="text-info">Mon paris</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <nav class="paris-nav-sm d-flex align-items-center">
+        
+        <nav class="navbar">
+          <div class="container-fluid">
+            <button class="button-search" title="bouton-menu"></button>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarToggleExternalContent"
+              aria-controls="navbarToggleExternalContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
           </div>
-        </div>
-        <div class="header-button-menu d-flex align-items-center">
-          <button></button>
-          <nav class="navbar">
-            <div class="container-fluid">
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarToggleExternalContent"
-                aria-controls="navbarToggleExternalContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            </div>
-          </nav>
-        </div>
-        <!-- <div class=" row collapse" id="navbarToggleExternalContent" style="height: 50px; width: 100%; background-color: blue; ">
-          <nav class="paris-header-nav" id="navigation">
-            <h1>Hello</h1>
-          </nav>
-        </div> -->
-    
-     
-
+        </nav>
+      </nav>
     </header>
 
     <main>
-      <div class="container-fluid my-4">
+      <div class="container-fluid">
         <nav class="row mt-4 mb-2 row text-center text-uppercase paris-tabs">
           <div class="col text-secondary"><a href=""  class="text-secondary">Pratique</a></div>
           <div class="col"><a href="">Actualités</a></div>
           <div class="col"><a href="" class="text-secondary">Telex</a></div>
         </nav>
-
-        
 
         <div class="row justify-content-around">
           
@@ -172,41 +163,41 @@
             </nav>
           </section>
 
-          <section class="col col-sm-12 col-md-3 section-actus">
-            <article class="article-primary">
-              <div class="zoom-img">
-                <img class="img-fluid" src="./images/img-actu.jpg" alt="">
-              </div>
-              <p class="text-bg-danger text-center paris-tag-article-primary">À la une</p>
-              <div class="bg-light paris-text-article-primary">
-                <h2>Ces façades qui font voyager sans quitter Paris</h2>
-                <p>Des plus modernes aux plus anciennes, ces façades parisiennes nous emmènent en voyage vers des contrées plus ou moins lointaines, tout en restant au coin …</p> 
-              </div>
+          <section class="p-0 col-12 col-md-5" >
+            <article class="paris-article article-primary">
+                <div class="zoom-img paris-article-img d-block">
+                  <img class="img-fluid" src="./images/img-actu.jpg" alt="">
+                </div>        
+                <div class="d-flex flex-column bg-light paris-article-content align-items-start">
+                 
+                  <h2>Ces façades qui font voyager sans quitter Paris</h2>
+                  <p>Des plus modernes aux plus anciennes, ces façades parisiennes nous emmènent en voyage vers des contrées plus ou moins lointaines, tout en restant au coin …</p> 
+                  <p class="d-inline-flex order-first text-bg-danger text-center paris-tag-article">À la une</p>
+                </div>    
             </article>
-          
-            <section class="row pt-5 mx-2">
-              <div class="col-12 col-md-6">
-                <article class="article-secondary">
-                  <div class="zoom-img">
-                    <img class="img-fluid" src="./images/img-actu-s-1.jpg" alt="">
-                  </div>
-                  <p class="text-bg-info text-center py-2 px-3 paris-tag-article-secondary text-uppercase">Reportage</p>
-                  <div class="ps-4 py-4 bg-light paris-text-article-secondary">
-                    <h3>Les trésors restaurés de l'église Saint-Supplice</h3>
-                  </div>
-                </article>
-              </div>
-              <div class="col-12 col-md-6">
-                <article class="paris-actu-article article-secondary">
-                  <div class="zoom-img">
-                    <img class="img-fluid" src="./images/img-actu-s-2.jpg" alt="">
-                  </div>
-                  <p class="text-bg-info text-center py-2 px-3 paris-tag-article-secondary text-uppercase">Actualité</p>
-                  <div class="ps-4 py-4 bg-light paris-text-article-secondary">
-                    <h3>L'application DansMaRue fait peau neuve!</h3>
-                  </div>
-                </article>
-              </div>
+
+            <section class="d-md-flex justify-content-center">
+              <article class="paris-article article-secondary">
+                <div class="zoom-img paris-article-img d-block">
+                  <img class="img-fluid" src="./images/img-actu-s-1.jpg" alt="">
+                </div>        
+                <div class="d-flex flex-column bg-light paris-article-content align-items-start">
+                 
+                  <h3>Les trésors restaurés de l'église Saint-Supplice</h3>
+                  <p class="d-inline-flex order-first text-bg-info text-center paris-tag-article">Reportage</p>
+                </div>
+              </article>
+              
+              <article class="paris-article article-secondary">
+                <div class="zoom-img paris-article-img d-block">
+                  <img class="img-fluid" src="./images/img-actu-s-2.jpg" alt="">
+                </div>        
+                <div class="d-flex flex-column bg-light paris-article-content align-items-start">
+                 
+                  <h3>L'application DansMaRue fait peau neuve!</h3>
+                  <p class="d-inline-flex order-first text-bg-info text-center paris-tag-article">Actualité</p>
+                </div>
+              </article>
             </section>
           </section>
 
@@ -234,23 +225,23 @@
           </section>
         </div>
           
-          
       <div>
     </main>
 
     <footer>
       <div class="container-fluid">
         <div class="row text-center align-items-start">
-          <div class="col-12 col-md-5">
-            <img class="footer-logo m-5" src="./images/logo-ville-paris.png" alt="">
-            <p class="mb-5 dropdown-toggle data-bs-toggle="dropdown" aria-expanded="false"">Les Mairies</p>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-
-            <nav class="d-flex justify-content-center">
+          <div class="col-12 col-md-8">
+            <div class="d-flex flex-column flex-md-row justify-content-center align-items-center d-inline-flex">
+              <img class="footer-logo" src="./images/logo-ville-paris.png" alt="">
+              <p class="m-5 dropdown-toggle data-bs-toggle="dropdown" aria-expanded="false"">Les Mairies</p>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </div>
+            <nav class="d-flex justify-content-center align-items-center">
               <a href="" class="footer-extra-item">
                 <p>Visit Paris</p>
                 <button>Tourist office</button>
@@ -267,7 +258,7 @@
               </a>
             </nav>
           </div>
-          <div class="col-12 col-md-7 footer-newsletter text-light">
+          <div class="col-12 col-md-4 footer-newsletter text-light">
             <p>Recevez chaque semaine l'actualité de votre ville</p>
               <form>
                   <label for="exampleInputEmail1" class="form-label footer-form-label">Email address</label>
@@ -286,11 +277,11 @@
               </ul>
 
               <p class="m-0">Une question ? Contactez-nous sur</p>
-              <a class="text-danger footer-contact" href="">
+              <a class="text-danger" href="">
                 <button>@PARISJECOUTE</button>
               </a>
           </div>
-          <nav class="col-12 col-md-4 footer-contact">
+          <nav class="col-12 col-md-8 footer-contact">
               <ul class="list-unstyled d-flex flex-wrap justify-content-center text-uppercase">
                 <li>
                   <a href="">

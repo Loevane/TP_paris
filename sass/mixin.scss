@@ -13,17 +13,18 @@
   $colorHover: $light,
   $fontSize: 0.6rem,
   $bgColor: transparent,
-  $padding: 5px 8px
+  $padding: 5px 8px,
+  $fontWeight : 800
 ) {
   text-transform: uppercase;
   transition: all 0.5s ease-in-out;
   font-size: $fontSize;
-  font-weight: 800;
+  font-weight: $fontWeight;
   color: $color !important;
   border: 0;
   border-radius: 0;
   padding: $padding;
-  margin: 15px 5px;
+ 
   background-color: $bgColor;
   &:hover {
     box-shadow: $color 180px 0 0 1px inset;

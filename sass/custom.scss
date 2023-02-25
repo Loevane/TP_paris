@@ -3,7 +3,8 @@ body {
   font-size: 0.8rem;
   color: $primary;
   #logo {
-    width: 8.5rem;
+    width: 9.8rem;
+    padding: 10px 0;
   }
   a {
     text-decoration: none;
@@ -15,12 +16,22 @@ body {
 
   header {
     border-bottom: 2px solid rgb(232, 232, 232);
+    .paris-nav-sm{
+      .button-search{
+        border: 0;
+        &::before {
+          @include glyphe;
+          content: "\e801";
+          font-size: 1.5rem;
+        }
+      }
+    }
     .paris-nav-inline {
       font-weight: 600;
       font-size: 1rem;
     }
     .paris-nav-list {
-      padding: 0.85rem 1.5rem;
+      padding: 1.3rem 1.5rem;
       &:hover {
         border-top: 5px solid $primary;
       }
@@ -28,13 +39,16 @@ body {
     .nav-list-search {
       padding: 0.45rem 1.5rem;
       width: 11rem;
-      .paris-input-nav {
-        background-color: rgb(232, 232, 232);
-        &::before {
+      button{
+        @include buttonSlide($bgColor: rgb(229, 229, 229), $color: $primary, $fontSize: 0.9rem, $fontWeight: 600, $padding: 12px 8px);
+        &::before{
           @include glyphe;
           content: "\e801";
         }
       }
+       
+      
+   
     }
     .my-paris {
       padding: 0 1.5rem;
@@ -50,53 +64,49 @@ body {
       font-size: 0.8em;
       font-weight: 800;
     }
-
-    .section-actus {
-      .article-primary {
+    .paris-article {
+      .paris-article-content {
         position: relative;
-        h2 {
-          font-weight: 900;
-        }
-        .paris-tag-article-primary {
-          position: absolute;
-          top: 75%;
-          left: 5%;
-          z-index: 10;
-          padding: 6px 12px;
-          font-size: 0.7rem;
-          font-weight: 800;
-        }
-        .paris-text-article-primary {
-          position: absolute;
-          top: 80%;
-          z-index: 1;
-          padding: 20px 35px;
-          margin-right: 20px;
-        }
-      }
 
-      .article-secondary {
-        position: relative;
-        margin: 0 10px;
-        h3 {
-          font-size: 1rem;
-          font-weight: 800;
-        }
-        .paris-tag-article-secondary {
-          position: absolute;
-          top: 62%;
-          left: 5%;
-          z-index: 1;
+        .paris-tag-article {
+          padding: 8px 20px;
           font-size: 0.7rem;
           font-weight: 800;
         }
       }
     }
+    .article-primary {
+      h2 {
+        font-weight: 900;
+      }
+      .paris-article-content {
+        padding: 0 3rem;
+        margin-right: 1.5rem;
+        margin-top: -3rem;
+      }
+      .paris-tag-article {
+        margin: -1.2rem 0 0.4rem 1rem;
+      }
+    }
+    .article-secondary {
+      margin: 2.5rem;
+      h3 {
+        font-size: 1rem;
+        font-weight: 800;
+      }
+      .paris-article-content {
+        padding: 0 1rem;
+      }
+      .paris-tag-article {
+        margin: -1.2rem 0 0.4rem 0;
+      }
+    }
 
     .paris-access {
       font-weight: 700;
+      margin-top: 1.5rem;
       h2 {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
         font-weight: 700;
       }
       .paris-access-nav {
@@ -116,7 +126,8 @@ body {
           }
         }
         button {
-          @include buttonSlide;
+          margin-top: 10px;
+          @include buttonSlide($fontSize: 0.8rem, $fontWeight: 600);
         }
       }
       .services {
@@ -128,6 +139,15 @@ body {
             border-top: 2px solid $primary;
           }
         }
+      }
+    }
+
+    .paris-telex-article {
+      border-bottom: 0.1rem solid #e8e8e8;
+      margin-top: 1.5rem;
+      h2 {
+        font-size: 1.4rem;
+        font-weight: 600;
       }
     }
 
@@ -148,17 +168,19 @@ body {
   }
 
   footer {
+    max-width: 100%;
     .footer-logo {
-      max-width: 150px;
+      width: 10rem;
+      height: auto;
     }
 
     .footer-extra-item {
-      border-right: 1px solid rgb(221, 221, 221);
-      padding: 0px 25px;
+      border-right: 2px solid rgb(221, 221, 221);
+      padding: 0px 10px;
       p {
         font-weight: 700;
         font-size: 1.1rem;
-        margin: 0
+        margin: 0;
       }
       button {
         @include buttonSlide;
@@ -173,11 +195,12 @@ body {
           @include hideSR;
         }
         button {
+          margin: 15px;
           @include buttonSlide(
             $bgColor: $danger,
             $color: $light,
             $colorHover: $danger,
-            $padding : 15px 18px
+            $padding: 15px 18px
           );
         }
       }
@@ -209,32 +232,20 @@ body {
         @include glyphe;
         content: "\f16a";
       }
-      .footer-contact {
-        button {
-          @include buttonSlide($fontSize: 0.8rem);
-        }
+      button {
+        @include buttonSlide($fontSize: 0.8rem);
       }
     }
-    .footer-contact{
-      margin-top: 15px;
+    .footer-contact {
+      padding: 2rem;
       a {
         padding: 10px;
         font-weight: 700;
-        font-size: 0.6rem;
-        &:hover{
+        font-size: 0.7rem;
+        &:hover {
           color: $danger;
         }
       }
-    }
-
-    
-  }
-
-  .paris-telex-article {
-    border-bottom: 1px solid rgb(231, 231, 231);
-    h2 {
-      font-size: 1.4rem;
-      font-weight: 600;
     }
   }
 }
@@ -254,25 +265,11 @@ body {
   .paris-tabs {
     @include hideSR;
   }
+  .article-secondary {
+    margin: 1.2rem !important;
+  }
 
-  .section-actus {
-    width: 40rem;
-    
-    .article-primary {
-      .paris-text-article-primary{
-        margin-left: 60px;
-      }
-      .paris-tag-article-primary{
-        margin-left: 50px;
-      }
-    }
-
-    .article-secondary {
-      .paris-tag-article-secondary {
-        top: 55% !important;
-        left: 10% !important;
-        ;
-      }
-    }
+  .footer-contact{
+    margin-top: -6.5rem;
   }
 }

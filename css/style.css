@@ -683,7 +683,7 @@ progress {
   }
 }
 .row {
-  --bs-gutter-x: 1.5rem;
+  --bs-gutter-x: 0;
   --bs-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
@@ -4146,7 +4146,7 @@ textarea.form-control-lg {
   --bs-card-color: ;
   --bs-card-bg: #fff;
   --bs-card-img-overlay-padding: 1rem;
-  --bs-card-group-margin: 0.75rem;
+  --bs-card-group-margin: 0;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -10798,7 +10798,8 @@ body {
   color: rgb(7, 31, 50);
 }
 body #logo {
-  width: 8.5rem;
+  width: 9.8rem;
+  padding: 10px 0;
 }
 body a {
   text-decoration: none;
@@ -10809,12 +10810,44 @@ body p {
 body header {
   border-bottom: 2px solid rgb(232, 232, 232);
 }
+body header .paris-nav-sm .button-search {
+  border: 0;
+}
+body header .paris-nav-sm .button-search::before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 0.8em;
+  margin-right: 0.2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: 0.2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  content: "\e801";
+  font-size: 1.5rem;
+}
 body header .paris-nav-inline {
   font-weight: 600;
   font-size: 1rem;
 }
 body header .paris-nav-list {
-  padding: 0.85rem 1.5rem;
+  padding: 1.3rem 1.5rem;
 }
 body header .paris-nav-list:hover {
   border-top: 5px solid rgb(7, 31, 50);
@@ -10823,10 +10856,22 @@ body header .nav-list-search {
   padding: 0.45rem 1.5rem;
   width: 11rem;
 }
-body header .nav-list-search .paris-input-nav {
-  background-color: rgb(232, 232, 232);
+body header .nav-list-search button {
+  text-transform: uppercase;
+  transition: all 0.5s ease-in-out;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgb(7, 31, 50) !important;
+  border: 0;
+  border-radius: 0;
+  padding: 12px 8px;
+  background-color: rgb(229, 229, 229);
 }
-body header .nav-list-search .paris-input-nav::before {
+body header .nav-list-search button:hover {
+  box-shadow: rgb(7, 31, 50) 180px 0 0 1px inset;
+  color: #f8f9fa !important;
+}
+body header .nav-list-search button::before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -10889,49 +10934,44 @@ body main .paris-tabs {
   font-size: 0.8em;
   font-weight: 800;
 }
-body main .section-actus .article-primary {
+body main .paris-article .paris-article-content {
   position: relative;
 }
-body main .section-actus .article-primary h2, body main .section-actus .article-primary .h2 {
-  font-weight: 900;
-}
-body main .section-actus .article-primary .paris-tag-article-primary {
-  position: absolute;
-  top: 75%;
-  left: 5%;
-  z-index: 10;
-  padding: 6px 12px;
+body main .paris-article .paris-article-content .paris-tag-article {
+  padding: 8px 20px;
   font-size: 0.7rem;
   font-weight: 800;
 }
-body main .section-actus .article-primary .paris-text-article-primary {
-  position: absolute;
-  top: 80%;
-  z-index: 1;
-  padding: 20px 35px;
-  margin-right: 20px;
+body main .article-primary h2, body main .article-primary .h2 {
+  font-weight: 900;
 }
-body main .section-actus .article-secondary {
-  position: relative;
-  margin: 0 10px;
+body main .article-primary .paris-article-content {
+  padding: 0 3rem;
+  margin-right: 1.5rem;
+  margin-top: -3rem;
 }
-body main .section-actus .article-secondary h3, body main .section-actus .article-secondary .h3 {
+body main .article-primary .paris-tag-article {
+  margin: -1.2rem 0 0.4rem 1rem;
+}
+body main .article-secondary {
+  margin: 2.5rem;
+}
+body main .article-secondary h3, body main .article-secondary .h3 {
   font-size: 1rem;
   font-weight: 800;
 }
-body main .section-actus .article-secondary .paris-tag-article-secondary {
-  position: absolute;
-  top: 62%;
-  left: 5%;
-  z-index: 1;
-  font-size: 0.7rem;
-  font-weight: 800;
+body main .article-secondary .paris-article-content {
+  padding: 0 1rem;
+}
+body main .article-secondary .paris-tag-article {
+  margin: -1.2rem 0 0.4rem 0;
 }
 body main .paris-access {
   font-weight: 700;
+  margin-top: 1.5rem;
 }
 body main .paris-access h2, body main .paris-access .h2 {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 700;
 }
 body main .paris-access .paris-access-nav {
@@ -10976,15 +11016,15 @@ body main .paris-access .paris-access-nav .paris-li-access::before {
   font-size: 1rem;
 }
 body main .paris-access .paris-access-nav button {
+  margin-top: 10px;
   text-transform: uppercase;
   transition: all 0.5s ease-in-out;
-  font-size: 0.6rem;
-  font-weight: 800;
+  font-size: 0.8rem;
+  font-weight: 600;
   color: #dc3545 !important;
   border: 0;
   border-radius: 0;
   padding: 5px 8px;
-  margin: 15px 5px;
   background-color: transparent;
 }
 body main .paris-access .paris-access-nav button:hover {
@@ -11001,6 +11041,14 @@ body main .paris-access .services .service-list {
 body main .paris-access .services .service-list:hover {
   border-top: 2px solid rgb(7, 31, 50);
 }
+body main .paris-telex-article {
+  border-bottom: 0.1rem solid #e8e8e8;
+  margin-top: 1.5rem;
+}
+body main .paris-telex-article h2, body main .paris-telex-article .h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
 body main .zoom-img {
   overflow: hidden;
   max-width: 100%;
@@ -11013,12 +11061,16 @@ body main .zoom-img img:hover {
   transition: transform 0.2s ease;
   padding: 0;
 }
+body footer {
+  max-width: 100%;
+}
 body footer .footer-logo {
-  max-width: 150px;
+  width: 10rem;
+  height: auto;
 }
 body footer .footer-extra-item {
-  border-right: 1px solid rgb(221, 221, 221);
-  padding: 0px 25px;
+  border-right: 2px solid rgb(221, 221, 221);
+  padding: 0px 10px;
 }
 body footer .footer-extra-item p {
   font-weight: 700;
@@ -11034,7 +11086,6 @@ body footer .footer-extra-item button {
   border: 0;
   border-radius: 0;
   padding: 5px 8px;
-  margin: 15px 5px;
   background-color: transparent;
 }
 body footer .footer-extra-item button:hover {
@@ -11055,6 +11106,7 @@ body footer .footer-newsletter form .footer-form-label {
   z-index: -1000;
 }
 body footer .footer-newsletter form button {
+  margin: 15px;
   text-transform: uppercase;
   transition: all 0.5s ease-in-out;
   font-size: 0.6rem;
@@ -11063,7 +11115,6 @@ body footer .footer-newsletter form button {
   border: 0;
   border-radius: 0;
   padding: 15px 18px;
-  margin: 15px 5px;
   background-color: #dc3545;
 }
 body footer .footer-newsletter form button:hover {
@@ -11218,7 +11269,7 @@ body footer .footer-newsletter .youtube::before {
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
   content: "\f16a";
 }
-body footer .footer-newsletter .footer-contact button {
+body footer .footer-newsletter button {
   text-transform: uppercase;
   transition: all 0.5s ease-in-out;
   font-size: 0.8rem;
@@ -11227,30 +11278,22 @@ body footer .footer-newsletter .footer-contact button {
   border: 0;
   border-radius: 0;
   padding: 5px 8px;
-  margin: 15px 5px;
   background-color: transparent;
 }
-body footer .footer-newsletter .footer-contact button:hover {
+body footer .footer-newsletter button:hover {
   box-shadow: #dc3545 180px 0 0 1px inset;
   color: #f8f9fa !important;
 }
 body footer .footer-contact {
-  margin-top: 15px;
+  padding: 2rem;
 }
 body footer .footer-contact a {
   padding: 10px;
   font-weight: 700;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
 }
 body footer .footer-contact a:hover {
   color: #dc3545;
-}
-body .paris-telex-article {
-  border-bottom: 1px solid rgb(231, 231, 231);
-}
-body .paris-telex-article h2, body .paris-telex-article .h2 {
-  font-size: 1.4rem;
-  font-weight: 600;
 }
 
 @media (max-width: 799px) {
@@ -11278,18 +11321,11 @@ body .paris-telex-article h2, body .paris-telex-article .h2 {
     width: 1px;
     z-index: -1000;
   }
-  .section-actus {
-    width: 40rem;
+  .article-secondary {
+    margin: 1.2rem !important;
   }
-  .section-actus .article-primary .paris-text-article-primary {
-    margin-left: 60px;
-  }
-  .section-actus .article-primary .paris-tag-article-primary {
-    margin-left: 50px;
-  }
-  .section-actus .article-secondary .paris-tag-article-secondary {
-    top: 55% !important;
-    left: 10% !important;
+  .footer-contact {
+    margin-top: -6.5rem;
   }
 }
 
