@@ -5,88 +5,90 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Paris</title>
-    <link rel="stylesheet" href="./fontello/css/fontello.css">
+    <link rel="stylesheet" href="./fontello/css/fontello.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header class="d-flex justify-content-between">
-      <div class="d-flex align-items-center">
-        <h1 class="px-3">
-          <a href="">
-            <img
-              src="./images/logo-ville-paris.png"
-              alt="logo ville de Paris"
-              id="logo"
-            />
-          </a>
-        </h1> 
-      
-        <nav class="paris-nav-inline">
-          <ul class="list-unstyled d-flex align-items-center m-0">
-            <li class="paris-nav-list">
-              <a href="">Services</a>
-            </li>
-            <li class="paris-nav-list">
-              <a href="">Municipalité</a>
-            </li>
-            <li class="paris-nav-list">
-              <a href="">Participez !</a>
-            </li>
-            <li class="paris-nav-list">
-              <a href="">Que faire à Paris ?</a>
-            </li>
-            <li class="paris-nav-list">
-              <a href="">Jeux 2024</a>
-            </li>
-            <li class="nav-list-search">
-              <a href="">
-                <button>Recherche</button>
-              </a>
-        
-            </li>
-            <li class="my-paris text-info">
-              <a href="" class="text-info">Mon paris</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <nav class="paris-nav-sm d-flex align-items-center">
-        
-        <nav class="navbar">
-          <div class="container-fluid">
-            <button class="button-search" title="bouton-menu"></button>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarToggleExternalContent"
-              aria-controls="navbarToggleExternalContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          </div>
-        </nav>
+    <header
+      class="row flex-nowrap justify-content-between justify-content-md-start"
+    >
+      <h1 class="col-auto px-3">
+        <a href="">
+          <img
+            src="./images/logo-ville-paris.png"
+            alt="logo ville de Paris"
+            id="logo"
+          />
+        </a>
+      </h1>
+
+      <nav class="col-auto paris-nav-inline">
+        <ul class="list-unstyled d-flex align-items-center m-0">
+          <li class="paris-nav-list">
+            <a href="">Services</a>
+          </li>
+          <li class="paris-nav-list">
+            <a class="paris-nav-link" href="">Municipalité</a>
+          </li>
+          <li class="paris-nav-list">
+            <a href="">Participez !</a>
+          </li>
+          <li class="paris-nav-list">
+            <a href="">Que faire à Paris ?</a>
+          </li>
+          <li class="paris-nav-list">
+            <a href="">Jeux 2024</a>
+          </li>
+          <li class="nav-list-search">
+            <a href="">
+              <button type="button">Recherche</button>
+            </a>
+          </li>
+          <li class="paris-nav-list my-paris text-info">
+            <a href="" class="text-info">Mon paris</a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="col-auto navbar paris-nav-sm">
+        <div class="container-fluid">
+          <button
+            type="button"
+            class="button-search"
+            title="bouton-menu"
+          ></button>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarToggleExternalContent"
+            aria-controls="navbarToggleExternalContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
       </nav>
     </header>
 
     <main>
       <div class="container-fluid">
-        <nav class="row mt-4 mb-2 row text-center text-uppercase paris-tabs">
-          <div class="col text-secondary"><a href=""  class="text-secondary">Pratique</a></div>
+        <nav class="row text-center text-uppercase paris-tabs">
+          <div class="col text-secondary">
+            <a href="" class="text-secondary">Pratique</a>
+          </div>
           <div class="col"><a href="">Actualités</a></div>
           <div class="col"><a href="" class="text-secondary">Telex</a></div>
         </nav>
 
         <div class="row justify-content-around">
-          
           <section class="col col-sm-12 col-md-3 paris-access text-center">
             <h2>Accès rapides</h2>
             <nav class="text-uppercase paris-access-nav">
               <ul class="list-unstyled d-flex flex-column align-items-center">
                 <li class="paris-li-access">
-                  <a href="" >Piscines</a>
+                  <a href="">Piscines</a>
                 </li>
                 <li class="paris-li-access">
                   <a href="">Parcs, jardins et bois</a>
@@ -99,9 +101,7 @@
                 </li>
                 <li>
                   <a href="" class="text-danger">
-                    <button>
-                      Voir la carte
-                    </button>
+                    <button type="button">Voir la carte</button>
                   </a>
                 </li>
               </ul>
@@ -111,213 +111,387 @@
               <ul class="list-unstyled">
                 <li class="service-list">
                   <a href="">
-                  Carte d'identité / Passeport
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      viewBox="0 0 30 30"
+                    >
+                      <path
+                        d="M8.115 21a4.2 4.2 0 0 1-3-1.17.47.47 0 0 1-.14-.33v-3.37a3.11 3.11 0 0 1 6.22 0v3.37a.46.46 0 0 1-.13.33A4.21 4.21 0 0 1 8.115 21zm-2.17-1.67a3.42 3.42 0 0 0 4.35 0v-3.2a2.18 2.18 0 0 0-4.35 0zm4.82.2zm13.9-8.71h-9.79a.47.47 0 1 1 0-.93h9.75a.47.47 0 1 1 0 .93zm0 3.11h-9.79a.46.46 0 0 1-.47-.46.47.47 0 0 1 .47-.47h9.75a.47.47 0 0 1 .47.47.46.46 0 0 1-.43.46zm0 3.12h-9.79a.47.47 0 0 1 0-.94h9.75a.47.47 0 0 1 0 .94zm0 3.11h-9.79a.47.47 0 1 1 0-.93h9.75a.47.47 0 1 1 0 .93zm-16.62-6.2a2.43 2.43 0 1 1 2.43-2.43 2.43 2.43 0 0 1-2.43 2.43zm0-3.93a1.5 1.5 0 1 0 1.5 1.5 1.5 1.5 0 0 0-1.5-1.5zm18.08 14.07H3.875a3 3 0 0 1-3-3V8.9a3 3 0 0 1 3-3h22.25a3 3 0 0 1 3 3v12.25a3 3 0 0 1-3 2.95zM3.875 6.88a2 2 0 0 0-2 2v12.27a2 2 0 0 0 2 2h22.25a2 2 0 0 0 2-2V8.9a2 2 0 0 0-2-2z"
+                      />
+                    </svg>
+                    <p>Carte d'identité / Passeport</p>
                   </a>
                 </li>
                 <li class="service-list">
                   <a href="">
-                  Travailler à Paris
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      viewBox="0 0 30 30"
+                    >
+                      <path
+                        d="M14.994 3.87a5.84 5.84 0 0 0-5.59 5.6H3.285a.56.56 0 0 0-.57.56v15.53a.56.56 0 0 0 .57.57h23.43a.57.57 0 0 0 .57-.57V10.03a.57.57 0 0 0-.57-.56h-6.14a5.85 5.85 0 0 0-5.58-5.6zm0 1.14a4.68 4.68 0 0 1 4.41 4.46h-8.82a4.68 4.68 0 0 1 4.41-4.46zm-9.44 5.59h19.302l-8.452 5.62v-.36a.57.57 0 0 0-.609-.57h-2.13a.57.57 0 0 0-.56.57v.24zm-1.708.16l9.26 6.76v2.58a.57.57 0 0 0 .558.57h2.131a.57.57 0 0 0 .61-.57v-2.519l9.74-6.48V25l-22.3.01zm10.388 5.67h1v3.12h-1z"
+                      />
+                    </svg>
+                    <p>Travailler à Paris</p>
                   </a>
                 </li>
                 <li class="service-list">
                   <a href="">
-                  Stationnement résidentiel
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      viewBox="0 0 30 30"
+                    >
+                      <path
+                        d="M21.597 20.055H7.291a.458.458 0 1 1 0-.906h14.306a.458.458 0 1 1 0 .906zm-11.349-6.714a.448.448 0 0 1-.449-.448v-2.785a.458.458 0 0 1 .906 0v2.785a.448.448 0 0 1-.457.448zm-5.78 9.356a3.004 3.004 0 1 1 2.995-2.995 3.004 3.004 0 0 1-2.995 2.995zm0-5.083a2.089 2.089 0 1 0 2.09 2.088 2.089 2.089 0 0 0-2.09-2.088zm19.914 5.083a3.004 3.004 0 1 1 3.005-2.995 3.004 3.004 0 0 1-3.005 2.995zm0-5.083a2.089 2.089 0 1 0 2.09 2.088 2.098 2.098 0 0 0-2.09-2.088zm-4.377-4.045H4.745a.448.448 0 0 1-.41-.257.458.458 0 0 1 0-.467 8.765 8.765 0 0 1 7.067-3.3c3.53-.095 7.258 1.287 8.898 3.28a.458.458 0 0 1-.353.745zm-14.26-.953H18.88a12.15 12.15 0 0 0-7.4-2.194 8.03 8.03 0 0 0-5.733 2.242zM1.921 20.37a.439.439 0 0 1-.238-.076 4.502 4.502 0 0 1-1.66-3.968 4.092 4.092 0 0 1 1.65-3.405C2.856 9.89 5.631 7.943 9.503 7.43 14.75 6.742 20.787 8.907 23.4 12.4c4.77.504 6.6 3.947 6.6 6.036 0 1.078-1.154 1.717-3.07 1.717a.458.458 0 1 1 .018-.859c.801 0 2.155-.17 2.155-.81 0-1.793-1.62-4.77-5.97-5.15a.467.467 0 0 1-.334-.19c-2.356-3.34-8.135-5.428-13.162-4.77-3.586.477-6.123 2.27-7.143 5.055a.43.43 0 0 1-.21.238 3.1 3.1 0 0 0-1.326 2.737 3.682 3.682 0 0 0 1.192 3.13.458.458 0 0 1 .143.63.477.477 0 0 1-.372.21z"
+                      />
+                    </svg>
+                    <p>Stationnement résidentiel</p>
                   </a>
                 </li>
                 <li class="service-list">
                   <a href="">
-                  Encombrants
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      viewBox="0 0 30 30"
+                    >
+                      <path
+                        d="M18.628 26.6H4.106a.466.466 0 0 1-.476-.467v-3.407a.475.475 0 0 1 .476-.476h14.522a.475.475 0 0 1 .466.476v3.387a.466.466 0 0 1-.466.486zm-14.076-.942h13.6v-2.457h-13.6zm16.117-14.037a.475.475 0 0 1-.476-.466V9.333a.495.495 0 0 1 .99 0v1.822a.475.475 0 0 1-.514.466zM22.254 26.6h-3.626a.466.466 0 0 1-.476-.466v-8.35a2.288 2.288 0 0 1 4.577 0v8.33a.466.466 0 0 1-.475.486zm-3.16-.99h2.694v-7.827a1.347 1.347 0 1 0-2.694 0zm-14.988.99H.47a.466.466 0 0 1-.466-.466v-8.35a2.288 2.288 0 1 1 4.567 0v8.33a.466.466 0 0 1-.466.486zm-3.16-.99H3.63v-7.827a1.347 1.347 0 1 0-2.684 0zm28.569-11.947H18.618a.466.466 0 0 1-.475-.466V4.32a.931.931 0 0 1 .93-.92h9.996a.921.921 0 0 1 .92.92v8.916a.466.466 0 0 1-.474.426zm-10.421-.94h9.905v-8.4h-9.905zm9.975 13.877h-9.985a.931.931 0 0 1-.932-.922v-12.44a.466.466 0 0 1 .476-.477h10.896a.466.466 0 0 1 .476.476v12.481a.921.921 0 0 1-.931.882zm-9.975-.99h9.905V13.661h-9.905z"
+                      />
+                    </svg>
+                    <p>Encombrants</p>
                   </a>
                 </li>
                 <li class="service-list">
                   <a href="">
-                  Services en ligne
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      viewBox="0 0 30 30"
+                    >
+                      <path
+                        d="M15 23.635a1.14 1.14 0 1 0 1.14 1.14 1.14 1.14 0 0 0-1.14-1.14zm5.56-19.13H9.44a.47.47 0 0 0-.47.47v16.89a.47.47 0 0 0 .47.47h11.12a.47.47 0 0 0 .47-.47V4.975a.47.47 0 0 0-.47-.47zM9.91 21.395V5.445h10.18v16zm11.18-19.53H8.91a2.59 2.59 0 0 0-2.58 2.58v21.12a2.59 2.59 0 0 0 2.58 2.57h12.18a2.59 2.59 0 0 0 2.58-2.58V4.445a2.59 2.59 0 0 0-2.58-2.58zm1.64 2.58v21.12a1.65 1.65 0 0 1-1.64 1.64H8.91a1.65 1.65 0 0 1-1.64-1.64V4.445a1.65 1.65 0 0 1 1.64-1.64h12.18a1.65 1.65 0 0 1 1.64 1.64z"
+                      />
+                    </svg>
+                    <p>Services en ligne</p>
                   </a>
                 </li>
                 <li class="service-list">
                   <a href="">
-                  Facil'Familles
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      viewBox="0 0 30 30"
+                    >
+                      <path
+                        d="M22.235 26.855a7.13 7.13 0 0 1-4.18-1.21.53.53 0 0 1-.21-.42v-3.72c0-1.87 2-3.4 4.39-3.4 2.39 0 4.38 1.56 4.38 3.4v3.69a.52.52 0 0 1-.2.42 7.17 7.17 0 0 1-4.18 1.24zm-3.46-1.91a7.1 7.1 0 0 0 6.92 0v-3.44c0-1.29-1.59-2.38-3.46-2.38-1.87 0-3.46 1.12-3.46 2.38zm7.38.28zm-3.92-6.38a3.38 3.38 0 1 1 3.37-3.34 3.38 3.38 0 0 1-3.37 3.34zm0-5.83a2.46 2.46 0 1 0 2.45 2.49 2.45 2.45 0 0 0-2.45-2.49zm-12.82 13.85h-.15a8.33 8.33 0 0 1-5.75-2.29.51.51 0 0 1-.13-.33v-7a6 6 0 0 1 11.91 0v7a.47.47 0 0 1-.14.33 8.06 8.06 0 0 1-5.74 2.29zm-5.08-2.81a7.64 7.64 0 0 0 10.06 0v-6.8a5.03 5.03 0 1 0-10.06 0zm10.52.19zm-5.65-12.01a4.55 4.55 0 1 1 4.55-4.55 4.55 4.55 0 0 1-4.55 4.55zm0-8.16a3.62 3.62 0 1 0 3.62 3.61 3.61 3.61 0 0 0-3.62-3.61z"
+                      />
+                    </svg>
+                    <p>Facil'Familles</p>
                   </a>
                 </li>
                 <li class="service-list">
                   <a href="">
-                  Etat civil
-                  </a>
-                </li class="service-list">
-                <li class="service-list">
-                  <a href="">
-                  Signaler une anomalie avec DansMaRue
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      viewBox="0 0 30 30"
+                    >
+                      <path
+                        d="M14.915 10.57a.48.48 0 0 1-.48-.47v-.21a.49.49 0 0 1 .48-.48.48.48 0 0 1 .47.48v.21a.47.47 0 0 1-.47.47zm-2.37.58a.47.47 0 0 1-.38-.19l-1.42-1.89a.48.48 0 0 1 .09-.67.49.49 0 0 1 .67.1l1 1.36 2.96-4.42a.47.47 0 0 1 .66-.13.48.48 0 0 1 .13.66l-3.32 5a.44.44 0 0 1-.38.21zm7.78 4.5H9.675a.47.47 0 0 1-.48-.47.48.48 0 0 1 .48-.48h10.65a.48.48 0 0 1 .48.48.47.47 0 0 1-.48.47zm-10.62 2.84h10.66m0 .48H9.705a.48.48 0 0 1-.48-.48.47.47 0 0 1 .48-.47h10.66a.47.47 0 0 1 .47.47.48.48 0 0 1-.47.48zm-10.63 2.84h10.66m0 .43H9.735a.47.47 0 1 1 0-.94h10.66a.47.47 0 0 1 0 .94zm-5.48-9.67h-5.21a.47.47 0 0 1-.48-.47V6.89a.48.48 0 0 1 .48-.48h2.6a.49.49 0 0 1 .48.48.48.48 0 0 1-.48.47h-2.13v4.26h4.26V10.1a.49.49 0 0 1 .48-.48.48.48 0 0 1 .47.48v2a.47.47 0 0 1-.47.47zm8.76 13.98H6.325a.47.47 0 0 1-.47-.47V3.92a.47.47 0 0 1 .47-.47h17.35a.47.47 0 0 1 .47.47v22.16a.47.47 0 0 1-.47.47zm-16.88-1h16.41V4.39H6.795zm2.88-10.37h10.65"
+                      />
+                    </svg>
+                    <p>Etat civil</p>
                   </a>
                 </li>
                 <li class="service-list">
                   <a href="">
-                  S'installer à Paris
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                      <path
+                        d="M2.82 18.38l-.55-1-1.27-.51v-1.54l.33-1.09 1-.61v-.57l1.67-1.06 1.8.78 1.56 2.8-.53.29-.27 1.13-2.37 1.15zm-1.32-1.85l1.13.47.45.82 1-.16.74-.37c-.36.09-.79.17-1.21.25l-.1-.49c.35-.06.7-.13 1-.21l-1.27-1.08.76-1.57.44.22-.61 1.23 1 .85.74-.5 1.1-.59-1.2-2.2-1.4-.62-1.27.76v1.66h-.5v-.78l-.54.34-.26.88zm3.5.47v.17l1.14-.57.11-.42-.38.21zM13.56 24.23l-2.7-4.87-3-1.19-3.11 1.54v1.21l-1.86 1-.44 2.08v2.5l2.2.94 1 1.68 2.35-.32 4-2.09.57-2zm-2.06 2.06l-3.64 1.92-1.86.27-.95-1.48-2-.86v-2l.37-1.76 1.34-.7v1.7h.6v-3.18l2.51-1.26 2.58 1 2.29 4.06-2.17 1.09-1.22.91-1.07-2 1.19-3.13-1.9 1.71-3.06 2.36 2.19 1.22.3-.52-1.41-.78 2.41-1.86-.38 1 1.25 2.31a9.1 9.1 0 0 1-2 .47l.06.6a10.91 10.91 0 0 0 2.58-.62l-.05-.13 1.47-1.08 1-.48zM19 .78a17.77 17.77 0 0 0-2.55-.18c-3.2 0-6.4.8-6.4 2.3a1 1 0 0 0 .07.34.48.48 0 0 0-.07.26c1 2.4.5 5.8 0 8.1a33.05 33.05 0 0 0-.52 7.24l.74.29a30.22 30.22 0 0 1 .48-7.33 18 18 0 0 0 .25-7.63 6.05 6.05 0 0 0 1.08.45c.84 2.4.35 5.72 0 8a31.37 31.37 0 0 0-.41 8.17l1.92 3.46a12 12 0 0 0 3 .37 12.71 12.71 0 0 0 4-.81 4.65 4.65 0 0 0 1.69-1.08c1.7-2.4 1-8.6.5-11a17.41 17.41 0 0 1-.33-7c5.25-.91 2.94-3.46-3.45-3.95zm-4.64 22.92a8.46 8.46 0 0 1-1.25-.31.54.54 0 0 0-.06-.29c-1.4-1.8-1-7.2-.4-10.4a19 19 0 0 0 .18-7.88 12.62 12.62 0 0 0 1.33.24 37.26 37.26 0 0 1 0 8c-.16 2.82-.48 8.34.2 10.64zm1.69.18c-.33 0-.66 0-1-.07a.45.45 0 0 0 0-.11c-.7-1.8-.5-7.3-.2-10.5a29.87 29.87 0 0 0 0-8.07 11.12 11.12 0 0 0 1.16.06zm.4-19.38a14.38 14.38 0 0 1-3.9-.5.63.63 0 0 0-.26 0c-1-.31-1.54-.71-1.54-1.06 0-.7 2.2-1.6 5.7-1.6a15.45 15.45 0 0 1 3.42.34 8.31 8.31 0 0 1 2.2 1.05.46.46 0 0 1 .08.21c0 .66-2.15 1.56-5.7 1.56zm1.4 19.3c-.35 0-.72.06-1.09.07v-18.67c.43 0 .86 0 1.28-.07a29.42 29.42 0 0 0 0 8.17c.31 3.2.51 8.6-.19 10.5zm2.1-.6a.58.58 0 0 0-.06.17 8 8 0 0 1-1.22.33c.65-2.44.36-7.85.08-10.5a36.92 36.92 0 0 1 0-8.14 12.34 12.34 0 0 0 1.49-.28c-.73 2.47-.27 5.74.11 8 .5 3.02.8 8.52-.35 10.42zm1.7-1a2.57 2.57 0 0 1-.63.59c1-2.83.38-8 0-10-.39-2.26-.78-5.56 0-8l.65-.07a19.54 19.54 0 0 0 .39 7c.59 3.08.99 8.58-.41 10.48z"
+                      />
+                    </svg>
+
+                    <p>Signaler une anomalie avec DansMaRue</p>
                   </a>
                 </li>
                 <li class="service-list">
                   <a href="">
-                  Logement : prise de RDV en ligne
-                </a>
-              </li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      viewBox="0 0 30 45"
+                    >
+                      <path
+                        d="M14.94 3.754a.39.39 0 0 1-.39-.39v-1.75a.39.39 0 1 1 .78 0v1.75a.39.39 0 0 1-.39.39zm7.43 40.02h-3.15a.41.41 0 0 1-.3-.14.41.41 0 0 1-.08-.32 4.25 4.25 0 0 0 .06-.71 3.92 3.92 0 0 0-7.84 0 4.25 4.25 0 0 0 .06.71.41.41 0 0 1-.08.32.41.41 0 0 1-.3.14H7.59a.4.4 0 0 1-.33-.18.4.4 0 0 1 0-.37l3.08-7.37a.38.38 0 0 1 .36-.24h8.62a.38.38 0 0 1 .36.24l3.06 7.37a.41.41 0 0 1 0 .37.39.39 0 0 1-.37.18zm-2.7-.79h2.12l-2.76-6.56h-8.09l-2.76 6.59h2.12v-.38a4.7 4.7 0 1 1 9.4 0c-.02.1-.02.23-.03.35zm-2.73-6.56h-3.88a.41.41 0 0 1-.31-.14.4.4 0 0 1-.07-.33l1.15-5.53a.39.39 0 0 1 .38-.31h1.54a.39.39 0 0 1 .38.31l1.16 5.46a.44.44 0 0 1-.08.33.41.41 0 0 1-.27.21zm-3.36-.78h2.88l-1-4.67h-.9zm2.46-30.83h-2.1a.39.39 0 0 1-.41-.39 1.45 1.45 0 0 1 2.9 0 .39.39 0 0 1-.39.39zm-1.6-.78h1.08a.66.66 0 0 0-1.08 0zm2.5 23.09h-4a.4.4 0 0 1-.29-.12.38.38 0 0 1-.1-.29l1.44-22.29a.4.4 0 0 1 .39-.36h1.2a.4.4 0 0 1 .36.36l1.38 22.32a.38.38 0 0 1-.1.29.4.4 0 0 1-.28.09zm-3.55-.78h3.14l-1.32-21.53h-.46zm5.9 10.08h-8.62a.37.37 0 0 1-.31-.15.39.39 0 0 1-.07-.33l1.79-7.43a.39.39 0 0 1 .38-.3h5a.39.39 0 0 1 .38.3l1.79 7.43a.36.36 0 0 1-.07.33.37.37 0 0 1-.27.15zm-8.12-.78h7.63l-1.61-6.65h-4.42zm6.82-6.68h-6.05a.38.38 0 0 1-.39-.39v-1.84a.39.39 0 0 1 .39-.39h6a.4.4 0 0 1 .4.39v1.84a.39.39 0 0 1-.35.39zm-5.63-.78h5.24v-1.06h-5.24z"
+                      />
+                    </svg>
+                    <p>S'installer à Paris</p>
+                  </a>
+                </li>
+                <li class="service-list">
+                  <a href="">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      viewBox="0 0 30 30"
+                    >
+                      <path
+                        d="M20.705 25.908h1.37c.26 0 .47.21.47.47v1.83c0 .26-.21.47-.47.47h-1.37c-.26 0-.47-.21-.47-.47v-1.83c0-.26.21-.47.47-.47zm2.03-5.19h1.37c.26 0 .47.21.47.47v1.37c0 .26-.21.47-.47.47h-1.37c-.26 0-.47-.21-.47-.47v-1.37c0-.26.21-.47.47-.47zm-3.82 0h1.37c.26 0 .47.21.47.47v1.37c0 .26-.21.47-.47.47h-1.37c-.26 0-.47-.21-.47-.47v-1.37c0-.26.21-.47.47-.47zm3.82-4.41h1.37c.26 0 .47.21.47.47v1.37c0 .26-.21.47-.47.47h-1.37c-.26 0-.47-.21-.47-.47v-1.37c0-.26.21-.47.47-.47zm-3.82 0h1.37c.26 0 .47.21.47.47v1.37c0 .26-.21.47-.47.47h-1.37c-.26 0-.47-.21-.47-.47v-1.37c0-.26.21-.47.47-.47zm3.82-4.28h1.37c.26 0 .47.21.47.47v1.37c0 .26-.21.47-.47.47h-1.37c-.26 0-.47-.21-.47-.47v-1.37c0-.26.21-.47.47-.47zm-3.82 0h1.37c.26 0 .47.21.47.47v1.37c0 .26-.21.47-.47.47h-1.37c-.26 0-.47-.21-.47-.47v-1.37c0-.26.21-.47.47-.47zm3.7-4.44h1.37c.26 0 .47.21.47.47v1.37c0 .26-.21.47-.47.47h-1.37c-.26 0-.47-.21-.47-.47v-1.37c0-.26.21-.47.47-.47zm-3.82 0h1.37c.26 0 .47.21.47.47v1.37c0 .26-.21.47-.47.47h-1.37c-.26 0-.47-.21-.47-.47v-1.37c0-.26.21-.47.47-.47zm3.84-4.44h1.37c.26 0 .47.21.47.47v1.37c0 .26-.21.47-.47.47h-1.37c-.26 0-.47-.21-.47-.47v-1.37c0-.26.21-.47.47-.47zm-3.82 0h1.37c.26 0 .47.21.47.47v1.37c0 .26-.21.47-.47.47h-1.37c-.26 0-.47-.21-.47-.47v-1.37c0-.26.21-.47.47-.47zm-9.84 9.441h-2.69a.4.4 0 0 1-.4-.41V9.76a.4.4 0 0 1 .4-.4h2.69a.4.4 0 0 1 .41.4v2.42a.41.41 0 0 1-.41.41zm-2.29-.81h1.89v-1.62h-1.89zm7.47.81h-2.7a.4.4 0 0 1-.4-.41V9.76a.4.4 0 0 1 .4-.4h2.7a.4.4 0 0 1 .4.4v2.42a.4.4 0 0 1-.4.41zm-2.29-.81h1.88v-1.62h-1.88zm-2.86 6.49h-2.69a.4.4 0 0 1-.41-.4v-2.43a.4.4 0 0 1 .41-.4h2.69a.41.41 0 0 1 .41.4v2.43a.41.41 0 0 1-.41.4zm-2.29-.77h1.89v-1.65h-1.89zm7.47.77h-2.7a.4.4 0 0 1-.4-.4v-2.43a.4.4 0 0 1 .4-.4h2.7a.4.4 0 0 1 .4.4v2.43a.4.4 0 0 1-.4.4zm-2.26-.77h1.88v-1.65h-1.88zm-2.92 6.46h-2.69a.41.41 0 0 1-.41-.41v-2.42a.41.41 0 0 1 .41-.41h2.69a.41.41 0 0 1 .41.41v2.42a.42.42 0 0 1-.41.41zm-2.29-.81h1.89V21.5h-1.89zm7.47.81h-2.7a.41.41 0 0 1-.4-.41v-2.42a.4.4 0 0 1 .4-.41h2.7a.4.4 0 0 1 .4.41v2.42a.41.41 0 0 1-.4.41zm-2.26-.81h1.88V21.5h-1.88zm-.33 5.99h-2.67a.4.4 0 0 1-.4-.4v-2.42a.4.4 0 0 1 .4-.41h2.7a.4.4 0 0 1 .4.41v2.42a.4.4 0 0 1-.43.4zm-2.29-.8h1.88v-1.62h-1.88zm7.33.8H3.855a.4.4 0 0 1-.4-.4V7.26a.4.4 0 0 1 .4-.4h12.78a.4.4 0 0 1 .4.4v21.48a.4.4 0 0 1-.4.4zm-12.37-.8h12V7.66h-12zm21.88.8h-9.51a.41.41 0 0 1-.41-.4V1.26a.41.41 0 0 1 .41-.4h9.51a.4.4 0 0 1 .4.4v27.48a.4.4 0 0 1-.4.4zm-9.11-.8h8.71V1.66h-8.71z"
+                      />
+                    </svg>
+                    <p>Logement : prise de RDV en ligne</p>
+                  </a>
+                </li>
               </ul>
             </nav>
           </section>
 
-          <section class="p-0 col-12 col-md-5" >
+          <section class="p-0 col-12 col-md-5">
             <article class="paris-article article-primary">
-                <div class="zoom-img paris-article-img d-block">
-                  <img class="img-fluid" src="./images/img-actu.jpg" alt="">
-                </div>        
-                <div class="d-flex flex-column bg-light paris-article-content align-items-start">
-                 
-                  <h2>Ces façades qui font voyager sans quitter Paris</h2>
-                  <p>Des plus modernes aux plus anciennes, ces façades parisiennes nous emmènent en voyage vers des contrées plus ou moins lointaines, tout en restant au coin …</p> 
-                  <p class="d-inline-flex order-first text-bg-danger text-center paris-tag-article">À la une</p>
-                </div>    
+              <div class="zoom-img paris-article-img d-block">
+                <img class="img-fluid" src="./images/img-actu.jpg" alt="" />
+              </div>
+              <div
+                class="d-flex flex-column bg-light paris-article-content align-items-start"
+              >
+                <h2>Ces façades qui font voyager sans quitter Paris</h2>
+                <p>
+                  Des plus modernes aux plus anciennes, ces façades parisiennes
+                  nous emmènent en voyage vers des contrées plus ou moins
+                  lointaines, tout en restant au coin …
+                </p>
+                <p
+                  class="d-inline-flex order-first text-bg-danger text-center paris-tag-article"
+                >
+                  À la une
+                </p>
+              </div>
             </article>
 
             <section class="d-md-flex justify-content-center">
               <article class="paris-article article-secondary">
                 <div class="zoom-img paris-article-img d-block">
-                  <img class="img-fluid" src="./images/img-actu-s-1.jpg" alt="">
-                </div>        
-                <div class="d-flex flex-column bg-light paris-article-content align-items-start">
-                 
+                  <img
+                    class="img-fluid"
+                    src="./images/img-actu-s-1.jpg"
+                    alt=""
+                  />
+                </div>
+                <div
+                  class="d-flex flex-column bg-light paris-article-content align-items-start"
+                >
                   <h3>Les trésors restaurés de l'église Saint-Supplice</h3>
-                  <p class="d-inline-flex order-first text-bg-info text-center paris-tag-article">Reportage</p>
+                  <p
+                    class="d-inline-flex order-first text-bg-info text-center paris-tag-article"
+                  >
+                    Reportage
+                  </p>
                 </div>
               </article>
-              
+
               <article class="paris-article article-secondary">
                 <div class="zoom-img paris-article-img d-block">
-                  <img class="img-fluid" src="./images/img-actu-s-2.jpg" alt="">
-                </div>        
-                <div class="d-flex flex-column bg-light paris-article-content align-items-start">
-                 
+                  <img
+                    class="img-fluid"
+                    src="./images/img-actu-s-2.jpg"
+                    alt=""
+                  />
+                </div>
+                <div
+                  class="d-flex flex-column bg-light paris-article-content align-items-start"
+                >
                   <h3>L'application DansMaRue fait peau neuve!</h3>
-                  <p class="d-inline-flex order-first text-bg-info text-center paris-tag-article">Actualité</p>
+                  <p
+                    class="d-inline-flex order-first text-bg-info text-center paris-tag-article"
+                  >
+                    Actualité
+                  </p>
                 </div>
               </article>
             </section>
+
+            <article class="paris-article article-primary">
+              <div class="zoom-img paris-article-img d-block">
+                <img class="img-fluid" src="./images/img-actu-2.jpg" alt="" />
+              </div>
+              <div
+                class="d-flex flex-column bg-light paris-article-content align-items-start"
+              >
+                <h2>Le Salon de l'Agriculture met le vivant à l'honneur</h2>
+                <p
+                  class="d-inline-flex order-first text-bg-info text-center paris-tag-article"
+                >
+                  Evènement
+                </p>
+              </div>
+            </article>
           </section>
 
           <section class="col col-sm-12 col-md-3 paris-telex">
             <article class="d-flex paris-telex-article">
-              <h2>
-                <span>23.</span>
+              <p class="telex-date">
+                <span>26.</span>
                 <span>02</span>
-              </h2>
+              </p>
               <section class="px-3">
-                <p>13h58 · Ukraine. Alors que l'invasion russe a débuté il y a un an le 24 février 2022, la tour Eiffel arborera les couleurs ukrainiennes du 23 au 26 février. Prague, Londres, Madrid, Budapest, Varsovie, Berlin, Bruxelles et Buenos Aires participeront aussi à cet hommage.</p>
-                <img class="img-fluid" src="./images/img-right-1.jpg" alt="">
-              </section class="">
+                <p>
+                  08h00 · Le saviez-vous ? Le 26 février 1802, l'écrivain Victor
+                  Hugo voit le jour à Besançon (Doubs). Il s'éteint à Paris en
+                  1885 après une vie dédiée à la littérature (Notre-Dame de
+                  Paris, Les Misérables…) et à la politique (engagements
+                  royalistes puis républicains). Le 1er juin 1885, la dépouille
+                  de Victor Hugo est conduite au Panthéon, escortée par un
+                  cortège de deux millions de personnes.
+                </p>
+                <button type="button">En savoir +</button>
+                <img class="img-fluid" src="./images/img-right-3.jpg" alt="" />
+              </section>
             </article>
             <article class="d-flex paris-telex-article">
-              <h2>
+              <p class="telex-date">
+                <span>23.</span>
+                <span>02</span>
+              </p>
+              <section class="px-3">
+                <p>
+                  13h58 · Ukraine. Alors que l'invasion russe a débuté il y a un
+                  an le 24 février 2022, la tour Eiffel arborera les couleurs
+                  ukrainiennes du 23 au 26 février. Prague, Londres, Madrid,
+                  Budapest, Varsovie, Berlin, Bruxelles et Buenos Aires
+                  participeront aussi à cet hommage.
+                </p>
+                <button type="button">En savoir +</button>
+                <img class="img-fluid" src="./images/img-right-1.jpg" alt="" />
+              </section>
+            </article>
+            <article class="d-flex paris-telex-article">
+              <p class="telex-date">
                 <span>22.</span>
                 <span>02</span>
-              </h2>
+              </p>
               <section class="px-3">
-                <p>08h00 · Le saviez-vous ? Le 23 février 1653, le duc de Nemours organise une grande fête à Paris pour célébrer le retour du roi Louis XIV à Paris après les troubles de la Fronde. Lors du spectacle à l'hôtel du Petit-Bourbon, en face du Louvre, le jeune Louis XIV danse, dissimulé derrière le masque du soleil : c'est l'origine de son surnom de « Roi soleil ».</p>
-                <img class="img-fluid" src="./images/img-right-2.jpg" alt="">
-              </section class="">
+                <p>
+                  08h00 · Le saviez-vous ? Le 23 février 1653, le duc de Nemours
+                  organise une grande fête à Paris pour célébrer le retour du
+                  roi Louis XIV à Paris après les troubles de la Fronde. Lors du
+                  spectacle à l'hôtel du Petit-Bourbon, en face du Louvre, le
+                  jeune Louis XIV danse, dissimulé derrière le masque du soleil
+                  : c'est l'origine de son surnom de « Roi soleil ».
+                </p>
+                <button type="button">En savoir +</button>
+                <img class="img-fluid" src="./images/img-right-2.jpg" alt="" />
+              </section>
             </article>
           </section>
         </div>
-          
-      <div>
+      </div>
     </main>
 
     <footer>
       <div class="container-fluid">
         <div class="row text-center align-items-start">
           <div class="col-12 col-md-8">
-            <div class="d-flex flex-column flex-md-row justify-content-center align-items-center d-inline-flex">
-              <img class="footer-logo" src="./images/logo-ville-paris.png" alt="">
-              <p class="m-5 dropdown-toggle data-bs-toggle="dropdown" aria-expanded="false"">Les Mairies</p>
+            <div
+              class="d-flex flex-column flex-md-row justify-content-center align-items-center d-inline-flex"
+            >
+              <img
+                class="footer-logo"
+                src="./images/logo-ville-paris.png"
+                alt=""
+              />
+              <p
+                class="m-5 dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Les Mairies
+              </p>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Action</a></li>
                 <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
               </ul>
             </div>
-            <nav class="d-flex justify-content-center align-items-center">
+            <nav class="d-flex justify-content-center align-items-center mb-4">
               <a href="" class="footer-extra-item">
                 <p>Visit Paris</p>
-                <button>Tourist office</button>
+                <button type="button">Tourist office</button>
               </a>
               <a href="" class="footer-extra-item">
                 <p>Open Data</p>
-                <button>En savoir +</button>
+                <button type="button">En savoir +</button>
               </a>
               <a href="" class="footer-extra-item border-0">
                 <p>Démarches</p>
-                <button>
-                  Services en ligne
-                </button>
+                <button type="button">Services en ligne</button>
               </a>
             </nav>
           </div>
           <div class="col-12 col-md-4 footer-newsletter text-light">
             <p>Recevez chaque semaine l'actualité de votre ville</p>
-              <form>
-                  <label for="exampleInputEmail1" class="form-label footer-form-label">Email address</label>
-                  <input type="email" class="form-control rounded-0" placeholder="Votre email" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <button type="submit">S'abonner</button>
-              </form>
-          
-              <p>Suivez-nous sur les réseaux sociaux</p>
+            <form class="d-md-flex align-items-md-center">
+              <label
+                for="exampleInputEmail1"
+                class="form-label footer-form-label"
+                >Email address</label
+              >
+              <input
+                type="email"
+                class="form-control rounded-0"
+                placeholder="Votre email"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+              />
+              <button type="submit">S'abonner</button>
+            </form>
 
-              <ul class="list-unstyled d-flex justify-content-center">
-                <li><a class="facebook" href=""></a></li>
-                <li><a class="twitter" href=""></a></li>
-                <li><a class="instagram" href=""></a></li>
-                <li><a class="linkedin" href=""></a></li>
-                <li><a class="youtube" href=""></a></li>
-              </ul>
+            <p>Suivez-nous sur les réseaux sociaux</p>
 
-              <p class="m-0">Une question ? Contactez-nous sur</p>
-              <a class="text-danger" href="">
-                <button>@PARISJECOUTE</button>
-              </a>
+            <ul class="list-unstyled d-flex justify-content-center">
+              <li><a class="facebook" href=""></a></li>
+              <li><a class="twitter" href=""></a></li>
+              <li><a class="instagram" href=""></a></li>
+              <li><a class="linkedin" href=""></a></li>
+              <li><a class="youtube" href=""></a></li>
+            </ul>
+
+            <p class="m-0">Une question ? Contactez-nous sur</p>
+            <a class="text-danger" href="">
+              <button type="button">@PARISJECOUTE</button>
+            </a>
           </div>
           <nav class="col-12 col-md-8 footer-contact">
-              <ul class="list-unstyled d-flex flex-wrap justify-content-center text-uppercase">
-                <li>
-                  <a href="">
-                    Contact
-                  </a> 
-                </li>
-                <li>
-                  <a href="">
-                    Presse
-                  </a> 
-                </li>
-                <li>
-                  <a href="">
-                    Mention légales
-                  </a> 
-                </li>
-                <li>
-                  <a href="">
-                    Accessibilité
-                  </a> 
-                </li>
-                <li>
-                  <a href="">
-                    Politique de cookies
-                  </a> 
-                </li>
-                <li>
-                  <a href="">
-                    Plan du site
-                  </a> 
-                </li>
-              </ul>
+            <ul
+              class="list-unstyled d-flex flex-wrap justify-content-center text-uppercase"
+            >
+              <li>
+                <a href=""> Contact </a>
+              </li>
+              <li>
+                <a href=""> Presse </a>
+              </li>
+              <li>
+                <a href=""> Mention légales </a>
+              </li>
+              <li>
+                <a href=""> Accessibilité </a>
+              </li>
+              <li>
+                <a href=""> Politique de cookies </a>
+              </li>
+              <li>
+                <a href=""> Plan du site </a>
+              </li>
+            </ul>
           </nav>
         </div>
       </div>
     </footer>
-
   </body>
 </html>
